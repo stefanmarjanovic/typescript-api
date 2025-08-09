@@ -15,8 +15,26 @@ function getUsers() {
         const API_URL = "https://jsonplaceholder.typicode.com/users";
         try {
             const { data, status } = yield fetchData(API_URL);
-            console.log(`Status: ${status}`);
-            console.log("Users:", data);
+            console.log(`Status Code: ${status}`);
+            console.log("Users: ", data);
+        }
+        catch (err) {
+            if (err instanceof Error) {
+                console.error(err.message);
+            }
+            else {
+                console.error("An unknown error occurred");
+            }
+        }
+    });
+}
+function getSpaceXLaunches() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const API_URL = "https://api.spacexdata.com/v4/launches";
+        try {
+            const { data, status } = yield fetchData(API_URL);
+            console.log(`Status Code: ${status}`);
+            console.log("Launches: ", data);
         }
         catch (err) {
             if (err instanceof Error) {
@@ -29,4 +47,5 @@ function getUsers() {
     });
 }
 getUsers();
+getSpaceXLaunches();
 //# sourceMappingURL=index.js.map
