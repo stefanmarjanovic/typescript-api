@@ -18,5 +18,5 @@
     "@types/axios": "^0.14.4",
     "@types/node": "^24.2.1"
   },
-  "type": "module"
+  "type": "commonjs"
 }
