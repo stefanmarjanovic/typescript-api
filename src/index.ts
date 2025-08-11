@@ -49,5 +49,12 @@ async function getSpaceXLaunches() {
     }
 }
 
-getUsers();
-getSpaceXLaunches();
+function main() {
+  console.log("******* Typicode Users *******\n");
+  getUsers().then(() => {
+    console.log("\n ******* SpaceX Launches *******\n");
+    getSpaceXLaunches();
+  });
+}
+
+main();
