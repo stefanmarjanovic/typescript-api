@@ -1,4 +1,4 @@
-import { fetchData } from "./api.js";
+import { fetchData } from "./api";
 
 interface User{
     id: number;
