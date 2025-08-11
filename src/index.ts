@@ -1,11 +1,13 @@
 import { fetchData } from "./api";
 
+// User struct
 interface User{
     id: number;
     name: string; 
     email: string; 
 }
 
+// SpaceX Launch struct
 interface spaceX {
     id: string;
     name: string;
@@ -13,7 +15,7 @@ interface spaceX {
 }
 
 // Example usage of fetchData function
-// Fetching a list of users from a public API - jsonplaceholder.typicode.com
+// Fetch a list of users from public API - jsonplaceholder.typicode.com
 async function getUsers(){
     const API_URL = "https://jsonplaceholder.typicode.com/users";
 
@@ -30,6 +32,8 @@ async function getUsers(){
     }
 }
 
+// Fetch a list of launches from a spaceX public API
+// no authentication is required
 async function getSpaceXLaunches() {
     const API_URL = "https://api.spacexdata.com/v4/launches/latest";
     try {
